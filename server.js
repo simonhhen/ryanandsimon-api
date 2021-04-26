@@ -1,8 +1,10 @@
 const express = require('express')
 app = express()
 port = process.env.PORT || 3000
+
 mongoose = require('mongoose')
-const uri = 'mongodb://localhost/Itemdb';
+const uri = "mongodb+srv://simon:YAw9UdgXVyRe6pmd@cluster0.9achw.mongodb.net/colinAndEmma?retryWrites=true&w=majority";
+
 Item = require('./api/models/item')
 Contribution = require('./api/models/contribution')
 // mongoose instance connection url connection
