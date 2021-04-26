@@ -36,6 +36,7 @@ contributionRoutes(app);
 
 app.get('*', (req, res) => {
   res.status(404).send({url: req.originalUrl + ' not found'})
+  return;
 })
 app.listen(port);
 console.log('API server started on: ' + port);
