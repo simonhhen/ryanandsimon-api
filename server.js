@@ -8,7 +8,7 @@ const uri = "mongodb+srv://simon:YAw9UdgXVyRe6pmd@cluster0.9achw.mongodb.net/col
 Item = require('./api/models/item')
 Contribution = require('./api/models/contribution')
 // mongoose instance connection url connection
-mongoose.connect(uri, {
+client.connect(uri, {
  useNewUrlParser: true,
  useCreateIndex: true,
  useUnifiedTopology: true
