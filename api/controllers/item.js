@@ -10,6 +10,8 @@ exports.list_all_items = (req, res) => {
 };
 exports.create_a_item = (req, res) => {
   let new_item = new Item(req.body);
+  console.log(new_item);
+  console.log(req.body);
   new_item.save((err, item) => {
     if (err)
       res.send(err);
