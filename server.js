@@ -1,12 +1,15 @@
 const express = require('express')
 app = express()
 port = process.env.PORT || 3000
-mongoose = require('mongoose')
-const uri = 'mongodb://localhost/Itemdb';
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://simon:YAw9UdgXVyRe6pmd@cluster0.9achw.mongodb.net/colinAndEmma?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
 Item = require('./api/models/item')
 Contribution = require('./api/models/contribution')
 // mongoose instance connection url connection
-mongoose.connect(uri, {
+client.connect(uri, {
  useNewUrlParser: true,
  useCreateIndex: true,
  useUnifiedTopology: true
