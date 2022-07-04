@@ -20,9 +20,6 @@ exports.create_a_item = (req, res) => {
 };
 exports.read_a_item = (req, res) => {
   Item.findById(req.params.itemId, (err, item) => {
-    console.log(req.params.itemId);
-    console.log(item);
-    console.log(err);
     if (err)
       res.send(err);
     res.json(item);
@@ -30,10 +27,7 @@ exports.read_a_item = (req, res) => {
 };
 exports.update_a_item = (req, res) => {
  Item.findOneAndUpdate({_id: req.params.itemId}, req.body, {new: true}, (err, task) => {
-    console.log(req.params.itemId);
-    console.log(req.body);
     console.log(task);
-    console.log(err);
     if (err)
       res.send(err);
     res.json(task);
